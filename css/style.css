@@ -17,6 +17,19 @@ main{
     background-color: rgb(185, 187, 189);
 
 }
+/*---------------------------Mateus---------------------------------------*/
+header{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+h1{
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
 
 .container {
     max-width: 1280px;
@@ -24,7 +37,55 @@ main{
     height: 120px;
 }
 
+<<<<<<< HEAD
 .flex-center {
+=======
+.banner{
+    width: 600px;
+    height: 350px;
+    background-image: url(../imagens/banner_mobile.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.btn{
+    margin-top: 50px;
+}
+
+.btn button{
+    margin-left: 50px;
+    width: 113px;
+    height: 31px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+.escolhas{
+ padding: 20px;
+}
+
+.imagenEscolha{
+    margin-top: 80px;
+    width: 100px;
+    height: 100px;
+    background-image: url(../imagens/tshirt2_mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.flexMateus {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*---------------------------Mateus---------------------------------------*/
+.flex {
+>>>>>>> 83b135c0c689fea86b0fa9f552bccc8134f0f219
     display: flex;
     align-items: center;
     justify-content: center;
