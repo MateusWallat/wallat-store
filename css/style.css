@@ -11,13 +11,14 @@ html, body {
 body {
     
 }
+
 main{
     margin: 0 auto;
     max-width: 600px;
     background-color: rgb(185, 187, 189);
 
 }
-/*---------------------------Mateus---------------------------------------*/
+
 header{
     width: 100%;
     height: 100px;
@@ -60,8 +61,8 @@ h1{
     color: white;
 }
 
-.escolhas{
- padding: 20px;
+.escolhas.flex-around {
+    padding: 20px;
 }
 
 .imagenEscolha{
@@ -80,7 +81,6 @@ h1{
     justify-content: space-around;
 }
 
-/*---------------------------Mateus---------------------------------------*/
 .flex {
     display: flex;
     align-items: center;

@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<!-- Copyright (C) 2000 Tivoli Systems, Inc. -->
+<!-- Copyright (C) 1999 IBM Corporation -->
+<!-- Copyright (C) 1998 Dascom, Inc. -->
+<!-- All Rights Reserved. -->
+<html>
+ <head> 
+  <title>Cigna Global Health Benefits - Provider LogIn for Cigna Envoy</title> 
+  <!-- internationalization  / reading--> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <!-- setup mobile viewport --> 
+  <meta name="viewport" content="initial-scale=1.0, width=device-width"> 
+  <!--Tells Apple Safari to run devices in full-screen mode -->
+  <!-- YES = Full Screen Mode --> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <!-- Meta tags related to title, description, keywords  --> 
+  <meta name="title" content="Welcome to the Cigna Envoy Provider Portal. Are you a Cigna provider? Register or login to your portal here."> 
+  <meta name="description" content="Welcome to Cigna. Since our founding in 1976, we have been a leader in the development of medical insurance and other employee benefits designed specifically for expatriates. We are known for the world-class service that we provide to our members - people like you."> 
+  <meta name="keywords" content="Cigna, Cigna Envoy, Cigna Global Health Benefits, Customer portal."> 
+  <link rel="stylesheet" type="text/css" media="all" href="../../../websealLoginPage_files/provider-styles.css"> 
+  <link rel="shortcut icon" href="../../../websealLoginPage_files/favicon.ico" type="image/x-icon"> 
+  <link rel="icon" href="../../../websealLoginPage_files/favicon.ico" type="image/x-icon"> 
+  <script type="text/javascript">
+// Ensure page is open in window rather than in popup
+if (top != self) {
+	top.location = self.location.href;
+} 
+</script> 
+  <!-- jQuery Library --> 
+  <script type="text/javascript" src="../../../websealLoginPage_files/js/jquery-3.6.0.min.js"></script> 
+  <script type="text/javascript" src="../../../websealLoginPage_files/js/jquery-functions.js"></script> 
+  <script type="text/javascript">
+<!--
+function pageLoader(){
+ formatFields();
+}
+
+function formatFields()
+{
+  document.loginForm.username.focus();
+}
+
+function submitUser()
+{
+   // document.loginForm.PASSWORD.focus();
+    /*  don't submit yet */
+    return false;
+}
+
+function checkSubmit()
+{
+  if ($.trim($('input[name=username]').val()) === "")  {
+     alert( "Please enter a valid username" );
+     return false;
+  }
+
+  if ($.trim($('input[name=password]').val()) === "")  {
+     alert( "Please enter a valid password" );
+     return false;
+  }
+  
+  $('input[name=username]').val($.trim($('input[name=username]').val()));
+  $('input[name=password]').val($.trim($('input[name=password]').val()));
+  
+  $( "#loginForm" ).submit();
+  
+  return true;
+}
+//-->
+</script> 
+ </head> 
+ <body onload="pageLoader()"> 
+  <div id="header"> 
+   <div class="innerContainer"> 
+    <a href="https://public.cignaenvoy.com"> <img src="../../../websealLoginPage_files/logo_cigna.gif" width="158" height="51" alt="Cigna logo" title="Cigna" class="hidden-phone"> <img src="../../../websealLoginPage_files/logo_cigna_mobile.gif" width="90" height="30" alt="Cigna logo" title="Cigna" class="visible-phone"> </a> 
+    <ul class="topTierNavigation"> 
+     <li class="english home-icon"><a href="https://public.cignaenvoy.com">Home</a> |</li> 
+     <li class="english"><a href="https://public.cignaenvoy.com/ciebpublic/pages/ContactUs-provider.htm">Contact Us</a> |</li> 
+     <li class="english"><a href="http://www.cignaglobalhealth.com/">About Us</a></li> 
+    </ul> 
+   </div>
+   <!-- close innerContainer --> 
+  </div>
+  <!-- close header --> 
+  <div id="container"> 
+   <div class="dottedLine"></div> 
+   <div class="clear"></div> 
+   <h4 class="greetingTitle">Global Health Benefits</h4> 
+   <div class="innerContainer"> 
+    <div class="interior-banner-div provider"> 
+     <h3 class="headerImageText english">BRINGING YOUR CARE <br>TO OUR CUSTOMERS WORLDWIDE</h3> 
+    </div> 
+    <div class="formWrapper"> 
+     <form class="loginForm" method="post" action="/pkmslogin.form" name="loginForm" id="loginForm"> 
+      <div class="english"> 
+       <h2>PROVIDER LOGIN</h2> 
+      </div> 
+      <div class="formLine"> 
+       <p class="error websealMessage"></p> 
+       <script type="text/javascript">
+				if ($('.websealMessage').html().indexOf('HPDIA0200W')>=0){
+					$('.websealMessage').html('Your Cigna ID and password does not match our records. Please try again.');
+				}
+			</script> 
+      </div> 
+      <div class="formLine"> 
+       <label for="username" class="english">User ID:</label> 
+       <input id="username" name="username" type="text" class="textbox"> 
+      </div> 
+      <div class="formLine"> 
+       <label for="password" class="english">Password/PIN:</label> 
+       <input type="hidden" name="login-form-type" value="pwd"> 
+       <input type="password" id="password" name="password" class="textbox" autocomplete="off"> 
+      </div> 
+      <div class="formLine"> 
+       <div class="english">
+        <input type="submit" name="login" value="Login" id="loginBtnEN" class="btn green loginButton" onclick="return checkSubmit();"> 
+        <a href="https://public.cignaenvoy.com/ciebpublic/passwordReset.htm?userClass=provider" class="forgotPasswordLink">Forgot password?</a>
+       </div> 
+       <p>The Password/PIN is case sensitive so make sure that Caps Lock is off.</p> 
+      </div> 
+      <div class="formLine noPassword"> 
+      </div> 
+     </form> 
+     <div class="welcomeParagraph"> 
+      <div class="english"> 
+       <h1>Welcome to Cigna Envoy for Providers!</h1> 
+       <p><a href="https://public.cignaenvoy.com/ciebpublic/providerInformation.htm" target="_blank" class="registerNowLink bold">Would you like more information on how to work with Cigna?</a><br> <a href="https://public.cignaenvoy.com/ciebpublic/registration.htm" class="registerNowLink bold">Want to join our Provider network?</a> (please note: US providers are not required to apply to join the Cigna International network) </p> 
+       <br> 
+       <br> 
+       <p><span class="bold">Need help?<br></span> Providers in <span class="bold">North &amp; South America</span> call: +1 305 908 9211<br> Providers in <span class="bold">Europe, Africa &amp; Middle East</span> call: +32 3 293 1811<br> Providers in <span class="bold">Asia &amp; Pacific</span> call: +603 21 78 1411 </p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="clear"></div> 
+   </div> 
+   <div class="clear"></div> 
+  </div> 
+  <!-- closeContainer --> 
+  <div id="footer"> 
+   <div class="solidLine"></div> 
+   <span class="floatleft english"><span class="copyDate">© 2014 Cigna. All rights reserved</span></span> 
+   <table width="135" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications." class="floatleft"> 
+    <tbody>
+     <tr> 
+      <td width="135" align="center" valign="top"><script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=member.cignaenvoy.com&amp;size=XS&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en">
+                </script><br> <a href="http://www.symantec.com/verisign/ssl-certificates" target="_blank" style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;"> ABOUT SSL CERTIFICATES</a></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <div class="footerlinks english"> 
+    <a href="http://www.cigna.com/legal-disclaimer" target="_blank">Legal Disclaimer</a> | 
+    <a href="http://www.cigna.com/privacy-info" target="_blank">Privacy</a> | 
+    <a href="https://public.cignaenvoy.com/media/pdf/Cookie_policy.pdf" target="_blank">Cookie Policy</a> 
+   </div> 
+   <!-- close innerContainer --> 
+  </div> 
+  <!-- /.footer --> 
+  <!-- Google Tag Manager --> 
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PQDFFB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PQDFFB');</script> 
+  <!-- End Google Tag Manager -->  
+ </body>
+</html>
